@@ -23,6 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.DirectorySearcher1 = New System.DirectoryServices.DirectorySearcher()
         Me.SuspendLayout()
         '
         'SimpleButton1
@@ -32,6 +33,12 @@ Partial Class Form1
         Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
         Me.SimpleButton1.TabIndex = 0
         Me.SimpleButton1.Text = "Test Button 1"
+        '
+        'DirectorySearcher1
+        '
+        Me.DirectorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01")
+        Me.DirectorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01")
+        Me.DirectorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01")
         '
         'Form1
         '
@@ -46,4 +53,5 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents DirectorySearcher1 As DirectoryServices.DirectorySearcher
 End Class
